@@ -1,0 +1,50 @@
+.container-card {
+    max-width: 50%;
+    max-height: 278px;
+    background: #EBEBEB;
+    margin-bottom: 25px;
+    cursor: pointer;
+    
+
+    &__content-lbl {
+
+        div:first-child{
+            background: #116193;
+            padding: 1px 5px;
+            max-height: 50px;
+
+            header {
+                margin-left: 7em;
+                text-align: start;
+            }
+        }
+
+        div:nth-child(2) {
+            padding: 15px 30px;
+            color: #595959;
+            text-align: start;
+
+            p {
+                margin-top: 35px;
+            }
+          }
+
+          &__circle {
+            display: flex;
+            justify-content: center;
+            width: 5px;
+            height: 35px;
+            border-radius: 50%;
+            background: #116193;
+            position: absolute;
+            border: 2px solid #00E8E4;
+            margin: -52px 0px 0px 20px;
+
+            a {
+                color: #00E8E4;
+                margin-top: 5px;
+                font-size: 22px;
+            }
+          }
+    }
+}

@@ -1,0 +1,24 @@
+<div class="container-card">
+    <div class="d-flex">
+        <section>
+            <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{ movie?.poster_path }}" />
+        </section>
+        <section class="container-card__content-lbl">
+            <div>
+                <header>
+                    <h2 [ngStyle]="{
+                        color: movie?.title ? '#00E8E4' : '#ab2d0e'
+                      }">{{ movie?.title ? movie?.title : titleGeneric }}</h2>
+                </header>
+                <div class="container-card__content-lbl__circle">
+                    <a>{{ movie?.vote_average! | specialCharacter}}</a>
+                </div>
+            </div>
+            <div>
+                <p [ngStyle]="{
+                    color: movie?.overview ? '#595959' : '#ab2d0e'
+                  }">{{ movie?.overview ? movie?.overview : descGeneric }}</p>
+            </div>
+        </section>
+    </div>
+</div>
