@@ -26,7 +26,44 @@
     justify-content: center;
 }
 
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
 h1, h2, h3 {
     color: #00E8E4;
 }
 
+/** CHANGE COR DO PLACEHOLDER PARA OPERA, CHROME, EDGE, EXPLORER... */
+::placeholder {
+    color: #98B7C9;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #98B7C9;
+}
+
+::-ms-input-placeholder {
+    color: #98B7C9;
+}

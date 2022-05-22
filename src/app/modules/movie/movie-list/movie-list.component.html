@@ -1,8 +1,9 @@
 <div class="container-list">
+    <div class="mb-3">
+        <app-search-filter></app-search-filter>
+    </div>
     <div *ngFor="let item of list_movies">
-        <app-card 
-            [movie]="item"
-        >
-    </app-card>
+        <app-card (click)="goToDetail(item)" [movie]="item">
+        </app-card>
     </div>
 </div>
