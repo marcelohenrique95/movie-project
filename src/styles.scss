@@ -26,6 +26,10 @@
     justify-content: center;
 }
 
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .mb-1 {
     margin-bottom: 10px;
 }
@@ -50,8 +54,17 @@
     margin-top: 30px;
 }
 
+.w-100 {
+    width: 100% !important;
+}
+
+a, p, label, h4, td {
+    font-family: 'Lato';
+}
+
 h1, h2, h3 {
     color: #00E8E4;
+    font-family: 'Abel';
 }
 
 /** CHANGE COR DO PLACEHOLDER PARA OPERA, CHROME, EDGE, EXPLORER... */
@@ -66,4 +79,14 @@ h1, h2, h3 {
 
 ::-ms-input-placeholder {
     color: #98B7C9;
+}
+
+@font-face {
+    font-family: "Abel";
+    src: local("Abel"), url('./assets/fonts/abel-font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"), url('./assets/fonts/Lato-Light.ttf') format('truetype');
 }
