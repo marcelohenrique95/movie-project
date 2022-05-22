@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   url: {
-    popular_movies: 'https://api.themoviedb.org/3/discover/movie?api_key=43a66c57dc5742d89d017d146c50f869&sort_by=popularity.desc&language=pt-BR'
+    popular_movies: 'https://api.themoviedb.org/3/discover/movie?api_key=43a66c57dc5742d89d017d146c50f869&sort_by=popularity.desc&language=pt-BR',
+    detail_movie: 'https://api.themoviedb.org/3/movie/',
+
   }
 };
 
