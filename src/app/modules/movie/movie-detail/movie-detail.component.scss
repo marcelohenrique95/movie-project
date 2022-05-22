@@ -1,0 +1,52 @@
+.container__detail {
+    background: #F2F2F2;
+
+    hr {
+        border: 1px solid #79EDEB;
+    }
+
+    &__header {
+        padding: 1px;
+        background: #E6E6E6;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+
+            h3 {
+                font-size: 21px;
+            }
+
+            a{
+                color: #B0B0B0;
+            }
+        }
+    }
+
+    &__info {
+            padding: 5px 35px;
+
+            h2 {
+                color: #116193;
+            }
+
+            table {
+                th {
+                    color: #116193;
+                }
+
+                td {
+                    color: #595959;
+                }
+            }
+    }
+
+    &__img {
+        img {
+            width: 295px;
+        }
+    }
+
+}

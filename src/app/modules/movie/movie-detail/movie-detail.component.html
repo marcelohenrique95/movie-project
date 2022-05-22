@@ -1,0 +1,45 @@
+<div class="container__detail">
+    <section class="container__detail__header">
+        <div>
+            <header>
+                <h3 [ngStyle]="{
+                    color: movieDetail?.title ? '#116193' : '#ab2d0e'
+                }">{{ movieDetail?.title ? movieDetail?.title : 'titleGeneric' }}</h3>
+                <a> {{ movieDetail?.release_date }}</a>
+            </header>
+        </div>
+    </section>
+    <div class="d-flex">
+        <section class="container__detail__info">
+            <div>
+                <h2> Sinopse </h2>
+            </div>
+            <hr />
+            <div>
+                <p [ngStyle]="{
+                    color: movieDetail?.overview ? '#595959' : '#ab2d0e'
+                }">{{ movieDetail?.overview ? movieDetail?.overview : 'descGeneric' }}</p>
+            </div>
+            <div class="mt-2">
+                <h2> Informações </h2>
+            </div>
+            <hr />
+            <table class="mt-2">
+                <tr class="head-table">
+                    <th *ngFor="let item of table_head">{{ item }}</th>
+                </tr>
+                <tr class="body-table">
+                    <td>teste</td>
+                    <td>abc</td>
+                    <td>acn</td>
+                    <td>agdg</td>
+                    <td>agdg</td>
+                    <td>agdg</td>
+                </tr>
+            </table>
+        </section>
+        <section class="container__detail__img">
+            <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{ movieDetail?.poster_path }}" />
+        </section>
+    </div>
+</div>
