@@ -27,9 +27,9 @@ export class MovieListComponent implements OnInit {
     })
   }
 
-  goToDetail(movie: Movie): void {
-    localStorage.setItem('movie', JSON.stringify(movie));
-    this.router.navigate(['movie/movie-detail'], { state: { data: movie }});
+  goToDetail(idMovie: number): void {
+    console.log('Id movie - ', idMovie);
+    this.router.navigate(['movie/' + idMovie +'/movie-detail']);
   }
 
 }

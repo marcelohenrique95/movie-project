@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from 'src/app/core/model/movie.model';
+import { ActivatedRoute } from '@angular/router';
+import { MovieDetail } from 'src/app/core/model/movie-datail.model';
+import { MovieService } from 'src/app/core/service/movie.service';
 import { MovieConstants } from '../movie.constants';
 
 @Component({
@@ -9,15 +11,40 @@ import { MovieConstants } from '../movie.constants';
 })
 export class MovieDetailComponent implements OnInit {
 
-  movieDetail: Movie;
+  movieDetail: MovieDetail;
+
+  idMovie: number;
 
   table_head = MovieConstants.HEAD_LABEL_TABLE;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) { }
 
   ngOnInit(): void {
-    this.movieDetail = JSON.parse(localStorage.getItem('movie') || '');
-    console.log('objeto - ', this.movieDetail);
+    this.getDetailMovie();
+  }
+
+  getDetailMovie(): void {
+    let id = this.getIdFromUrl();
+    this.movieService.getDetailMovie(id).subscribe((data) => {
+      if(data) {
+        this.movieDetail = data;
+        this.calcProfit(data);
+        console.log('Data detail - ', this.movieDetail);
+      }
+    })
+  }
+
+  getIdFromUrl(): number {
+    this.activatedRoute.params.subscribe(params => {
+      this.idMovie = +params['id'];
+      console.log('Id routeparam - ', this.idMovie);
+    });
+    return this.idMovie;
+  }
+
+  calcProfit(data: MovieDetail): void {
+    let profitCalc = data.revenue - data.budget;
+    this.movieDetail.profit = profitCalc;
   }
 
 }
