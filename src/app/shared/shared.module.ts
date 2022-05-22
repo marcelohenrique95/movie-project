@@ -6,6 +6,8 @@ import { CardComponent } from './components/card/card.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
 import { SpecialCharacterPipe } from './pipes/special-character.pipe';
+import { DurationPipe } from './pipes/duration.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,18 +17,22 @@ import { SpecialCharacterPipe } from './pipes/special-character.pipe';
     CardComponent,
     PaginationComponent,
     SearchFilterComponent,
-    SpecialCharacterPipe
+    SpecialCharacterPipe,
+    DurationPipe
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,
     CardComponent,
     PaginationComponent,
     SearchFilterComponent,
-    SpecialCharacterPipe
+    SpecialCharacterPipe,
+    DurationPipe
   ]
 })
 export class SharedModule { }

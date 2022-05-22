@@ -4,8 +4,14 @@
     background: #EBEBEB;
     margin-bottom: 25px;
     cursor: pointer;
-    
 
+    img {
+        &:hover {
+            transition: 0.3s;
+            opacity: 0.8;
+        }
+    }
+    
     &__content-lbl {
 
         div:first-child{
@@ -42,8 +48,8 @@
 
             a {
                 color: #00E8E4;
-                margin-top: 5px;
-                font-size: 22px;
+                margin-top: 2px;
+                font-size: 24px;
             }
           }
     }
