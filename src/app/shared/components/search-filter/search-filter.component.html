@@ -1,3 +1,11 @@
-<div class="container__search">
-    <input type="text" placeholder="Busque um filme por nome, ano ou gênero..."/>
-</div>
+<form [formGroup]="fb">
+    <div class="container__search">
+        <input 
+            type="text" 
+            formControlName="search" 
+            id="search" 
+            placeholder="Busque um filme por nome, ano ou gênero..."
+            (input)="searchByName()"
+            />
+    </div>
+</form>
