@@ -19,30 +19,30 @@
                 font-size: 21px;
             }
 
-            a{
+            a {
                 color: #B0B0B0;
             }
         }
     }
 
     &__info {
-            padding: 5px 35px;
+        padding: 5px 35px;
 
-            h2 {
+        h2 {
+            color: #548CAF;
+        }
+
+        table {
+            th {
                 color: #548CAF;
+                font-family: 'Abel';
             }
 
-            table {
-                th {
-                    color: #548CAF;
-                    font-family: 'Abel';
-                }
-
-                td {
-                    color: #595959;
-                    text-align: center;
-                }
+            td {
+                color: #595959;
+                text-align: center;
             }
+        }
     }
 
     &__genre {
@@ -67,5 +67,51 @@
             width: 295px;
         }
     }
+}
 
+@media screen and (max-width: 480px) {
+
+    .container__detail {
+        .cdv {
+            display: block;
+        }
+
+        &__info {
+            padding: 5px 10px;
+        }
+
+        table {
+            display: flex;
+
+            tr {
+                display: flex;
+                flex-direction: column;
+            }
+
+            th {
+                text-align: start;
+                margin-top: 8px;
+            }
+
+            td {
+                text-align: start;
+                margin-top: 10px;
+            }
+        }
+
+        &__genre {
+
+            margin-bottom: 15px;
+
+            a {
+                padding: 2px 7px;
+
+            }
+        }
+
+        img {
+            min-width: 100%;
+            height: 400px;
+        }
+    }
 }

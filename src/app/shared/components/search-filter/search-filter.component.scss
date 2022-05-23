@@ -8,3 +8,12 @@
         padding: 11px 20px;
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    .container__search {
+        input {
+            width: 80%;
+        }
+    }
+}
