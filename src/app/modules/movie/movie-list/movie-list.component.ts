@@ -12,10 +12,19 @@ export class MovieListComponent implements OnInit {
 
   list_movies: Movie[] = [];
 
+  n: number = 1;
+
   constructor(private router: Router, private movieService: MovieService) { }
 
   ngOnInit(): void {
     this.listMovies();
+  }
+
+  receiveListFilter(event: any): void {
+    this.list_movies = event;
+    if(this.list_movies.length == 0) {
+      this.listMovies();
+    }
   }
 
   listMovies(): void {
@@ -25,11 +34,6 @@ export class MovieListComponent implements OnInit {
         console.log('Lista de filmess', this.list_movies);
       }
     })
-  }
-
-  goToDetail(idMovie: number): void {
-    console.log('Id movie - ', idMovie);
-    this.router.navigate(['movie/' + idMovie +'/movie-detail']);
   }
 
 }

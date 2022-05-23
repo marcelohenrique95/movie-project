@@ -1,9 +1,9 @@
 <div class="container-list">
     <div class="mb-3">
-        <app-search-filter [listMovie]="list_movies"></app-search-filter>
+        <app-search-filter [listMovie]="list_movies" (listFiltered)="receiveListFilter($event)"></app-search-filter>
     </div>
-    <div *ngFor="let item of list_movies">
-        <app-card (click)="goToDetail(item.id)" [movie]="item">
-        </app-card>
+    <div *ngFor="let item of list_movies | paginate: { itemsPerPage: 5, currentPage: n }">
+        <app-card [movie]="item"></app-card>
     </div>
+    <pagination-controls (pageChange)="n = $event"></pagination-controls>
 </div>

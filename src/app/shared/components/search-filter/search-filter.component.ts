@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Movie } from 'src/app/core/model/movie.model';
 import { MovieService } from 'src/app/core/service/movie.service';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-filter',
@@ -10,9 +11,13 @@ import { MovieService } from 'src/app/core/service/movie.service';
 })
 export class SearchFilterComponent implements OnInit {
 
+  @Output() listFiltered: EventEmitter<Movie[]> = new EventEmitter<Movie[]>();
   @Input() listMovie: Movie[] = [];
 
   fb: FormGroup;
+
+  listBkp: Movie[] = [];
+  listFilter: Movie[] = [];
 
   constructor(private movieService: MovieService) { }
 
@@ -27,15 +32,22 @@ export class SearchFilterComponent implements OnInit {
   }
 
   searchByName(): void {
-    console.log('Chamando search....');
+    if (this.listBkp.length === 0) {
+      this.listBkp = this.listMovie;
+    }
     let valueSearch = this.fb.get('search')?.value;
     console.log(valueSearch);
-    
-    if(this.listMovie) {
-      let listafind = this.listMovie.find(element => {
-        element.title == valueSearch;
-      })
-      console.log('Includes - ', listafind);
+    if (valueSearch == '') {
+      this.listFiltered.emit([]);
+    }
+    if (this.listMovie) {
+      this.listFilter = [];
+      this.listBkp.find(element => {
+        if (element.title.toLowerCase().includes(valueSearch.toLowerCase())) {
+          this.listFilter.push(element);
+        }
+      });
+      this.listFiltered.emit(this.listFilter);
     }
   }
 
