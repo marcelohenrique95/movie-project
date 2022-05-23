@@ -40,6 +40,9 @@
             <div class="container__detail__genre mt-2">
                 <a *ngFor="let genre of movieDetail?.genres">{{ genre?.name }}</a>
             </div>
+            <div class="container__detail__info__circle">
+                <a>{{ movieDetail?.vote_average! | specialCharacter}}</a>
+            </div>
         </section>
         <section class="container__detail__img">
             <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{ movieDetail?.poster_path }}" />

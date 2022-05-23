@@ -85,6 +85,43 @@ h1, h2, h3 {
     color: #98B7C9;
 }
 
+.ngx-pagination {
+    padding-left: 0px !important;
+
+    li a span{
+        color: #116193 !important;
+    }
+
+    .pagination-next, .pagination-previous  {
+        display: none;
+    }
+  }
+  
+  .ngx-pagination .current,
+  .btn-info {
+    background: #116193 !important;
+    border: 3px solid #00E7E3 !important;
+    border-radius: 30px !important;
+    box-shadow: 0 0 0 3px #116193 !important;
+    width: 13px;
+    height: 25px;
+    padding: 7px 13px !important;
+    font-family: 'Abel' !important;
+    color: #00E7E3 !important;
+  }
+  
+  .ngx-pagination .current:hover {
+    background: #116193 !important;
+    border: 3px solid #00E7E3 !important;
+    border-radius: 30px !important;
+    box-shadow: 0 0 0 3px #116193 !important;
+    width: 13px;
+    height: 25px;
+    padding: 7px 13px;
+    font-family: 'Abel';
+    color: #00E7E3 !important;
+  }
+
 @font-face {
     font-family: "Abel";
     src: local("Abel"), url('./assets/fonts/abel-font.ttf') format('truetype');

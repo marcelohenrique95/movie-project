@@ -51,7 +51,8 @@
             border-radius: 50%;
             background: #116193;
             position: absolute;
-            border: 2px solid #00E8E4;
+            border: 3px solid #00E8E4;
+            box-shadow: 0 0 0 3px #116193 !important;
             margin: -57px 0px 0px 20px;
 
             a {
