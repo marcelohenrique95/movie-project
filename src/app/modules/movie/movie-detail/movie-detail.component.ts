@@ -17,6 +17,8 @@ export class MovieDetailComponent implements OnInit {
   idMovie: number;
 
   table_head = MovieConstants.HEAD_LABEL_TABLE;
+  titleGeneric = MovieConstants.GENERIC_TITLE_MOVIE;
+  descGeneric = MovieConstants.GENERIC_DESCRIPTION_MOVIE;
 
   constructor(
     private activatedRoute: ActivatedRoute, 

@@ -4,7 +4,7 @@
             <header>
                 <h3 [ngStyle]="{
                     color: movieDetail?.title ? '#116193' : '#ab2d0e'
-                }">{{ movieDetail?.title ? movieDetail?.title : 'titleGeneric' }}</h3>
+                }">{{ movieDetail?.title ? movieDetail?.title : titleGeneric }}</h3>
                 <a> {{ movieDetail?.release_date | date: 'dd/MM/yyyy' }}</a>
             </header>
         </div>
@@ -18,7 +18,7 @@
             <div>
                 <p [ngStyle]="{
                     color: movieDetail?.overview ? '#595959' : '#ab2d0e'
-                }">{{ movieDetail?.overview ? movieDetail?.overview : 'descGeneric' }}</p>
+                }">{{ movieDetail?.overview ? movieDetail?.overview : descGeneric }}</p>
             </div>
             <div class="mt-2">
                 <h2 class="mb-0"> Informações </h2>
