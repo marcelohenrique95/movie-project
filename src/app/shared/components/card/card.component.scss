@@ -5,16 +5,20 @@
     margin-bottom: 25px;
     cursor: pointer;
 
+    div:first-child {
+        box-shadow: 0 0 3px 1px #ccc;
+    }
+
     img {
         &:hover {
             transition: 0.3s;
             opacity: 0.8;
         }
     }
-    
+
     &__content-lbl {
 
-        div:first-child{
+        div:first-child {
             background: #116193;
             padding: 1px 5px;
             max-height: 50px;
@@ -41,9 +45,9 @@
             p {
                 margin-top: 35px;
             }
-          }
+        }
 
-          &__circle {
+        &__circle {
             display: flex;
             justify-content: center;
             width: 5px;
@@ -60,7 +64,7 @@
                 margin-top: 2px;
                 font-size: 24px;
             }
-          }
+        }
     }
 }
 
@@ -75,13 +79,13 @@
 
         &__content-lbl {
 
-            div:first-child{
+            div:first-child {
                 max-height: 100px;
 
                 p {
                     margin-top: 0px;
                 }
-    
+
                 header {
                     margin-left: 0px;
                 }

@@ -90,8 +90,13 @@ h1, h2, h3 {
 
     li a span{
         color: #116193 !important;
-    }
 
+    }
+    
+    a:hover {
+        background: transparent !important;
+    }
+    
     .pagination-next, .pagination-previous  {
         display: none;
     }
