@@ -6,6 +6,8 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import localePt from '@angular/common/locales/pt';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 registerLocaleData(localePt);
 @NgModule({
@@ -16,6 +18,8 @@ registerLocaleData(localePt);
   imports: [
     CommonModule,
     MovieRoutingModule,
+    NgxPaginationModule,
+    NgxSpinnerModule,
     SharedModule
   ],
   providers: [
