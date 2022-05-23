@@ -8,6 +8,7 @@ import { SearchFilterComponent } from './components/search-filter/search-filter.
 import { SpecialCharacterPipe } from './pipes/special-character.pipe';
 import { DurationPipe } from './pipes/duration.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSpinnerModule
   ],
   exports: [
     HeaderComponent,

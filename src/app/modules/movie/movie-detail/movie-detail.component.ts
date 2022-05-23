@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { MovieDetail } from 'src/app/core/model/movie-datail.model';
 import { MovieService } from 'src/app/core/service/movie.service';
 import { MovieConstants } from '../movie.constants';
@@ -17,9 +18,14 @@ export class MovieDetailComponent implements OnInit {
 
   table_head = MovieConstants.HEAD_LABEL_TABLE;
 
-  constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) { }
+  constructor(
+    private activatedRoute: ActivatedRoute, 
+    private movieService: MovieService, 
+    private spinner: NgxSpinnerService
+    ) { }
 
   ngOnInit(): void {
+    this.spinner.show();
     this.getDetailMovie();
   }
 
@@ -29,7 +35,9 @@ export class MovieDetailComponent implements OnInit {
       if(data) {
         this.movieDetail = data;
         this.calcProfit(data);
-        console.log('Data detail - ', this.movieDetail);
+        setTimeout(() => {
+          this.spinner.hide();
+        }, 500);
       }
     })
   }
