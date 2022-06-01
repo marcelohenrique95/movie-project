@@ -8,7 +8,6 @@ import { SharedModule } from './shared/shared.module';
 import { MovieService } from './core/service/movie.service';
 import { MovieComponent } from './modules/movie/movie.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    NgxPaginationModule,
-    NgxSpinnerModule
+    NgxPaginationModule
   ],
   providers: [
     MovieService
