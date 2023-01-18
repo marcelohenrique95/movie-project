@@ -43,8 +43,8 @@ export class MovieDetailComponent implements OnInit {
   getIdFromUrl(): number {
     this.activatedRoute.params.subscribe(params => {
       this.idMovie = +params['id'];
-      console.log('Id routeparam - ', this.idMovie);
     });
+    
     return this.idMovie;
   }
 

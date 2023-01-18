@@ -23,17 +23,12 @@
             padding: 1px 5px;
             max-height: 50px;
 
-            header {
-                margin-left: 7em;
-                text-align: start;
+            h2 {
+                margin: 10px 0px 12px 35px !important;
+            }
 
-                h2 {
-                    margin-bottom: 0px;
-                }
-
-                a {
-                    color: #9A9A9A !important;
-                }
+            a {
+                color: #9A9A9A;
             }
         }
 
@@ -50,21 +45,33 @@
         &__circle {
             display: flex;
             justify-content: center;
-            width: 5px;
-            height: 35px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             background: #116193;
             position: absolute;
             border: 3px solid #00E8E4;
             box-shadow: 0 0 0 3px #116193 !important;
-            margin: -57px 0px 0px 20px;
+            margin: -53px 0px 0px 20px;
 
             a {
-                color: #00E8E4;
-                margin-top: 2px;
+                color: #00E8E4 !important;
+                margin-top: 12px;
                 font-size: 24px;
             }
         }
+
+        .show-overview {
+            color: #116193;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    h2 {
+        text-align: end;
+        font-size: 18px;
     }
 }
 

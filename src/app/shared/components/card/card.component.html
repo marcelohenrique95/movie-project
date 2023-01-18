@@ -5,12 +5,10 @@
         </section>
         <section class="container-card__content-lbl">
             <div>
-                <header>
-                    <h2 [ngStyle]="{
-                        color: movie?.title ? '#00E8E4' : '#ab2d0e'
-                      }">{{ movie?.title ? movie?.title : titleGeneric }}</h2>
-                      <a class="mt-0">{{ movie?.release_date | date: 'dd/MM/yyyy' }}</a>
-                </header>
+                <h2 [ngStyle]="{
+                    color: movie?.title ? '#00E8E4' : '#ab2d0e'
+                  }">{{ movie?.title ? movie?.title : titleGeneric }}</h2>
+                  <a class="mt-0">{{ movie?.release_date | date: 'dd/MM/yyyy' }}</a>
                 <div class="container-card__content-lbl__circle">
                     <a>{{ movie?.vote_average! | specialCharacter}}</a>
                 </div>
@@ -18,7 +16,8 @@
             <div>
                 <p [ngStyle]="{
                     color: movie?.overview ? '#595959' : '#ab2d0e'
-                  }">{{ movie?.overview ? movie?.overview : descGeneric }}</p>
+                  }">{{ movie?.overview ? (movie?.overview | slice: 0:340) : descGeneric }}
+                <a class="show-overview" *ngIf="isBigOverview">...ver mais</a></p>
             </div>
         </section>
     </div>

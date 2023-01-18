@@ -14,10 +14,12 @@ export class CardComponent implements OnInit {
 
   descGeneric: string = CardConstants.GENERIC_DESCRIPTION_MOVIE;
   titleGeneric: string = CardConstants.GENERIC_TITLE_MOVIE;
+  isBigOverview: boolean = false;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.verifyLengthOverview();
   }
 
   goToDetail(): void {
@@ -25,5 +27,10 @@ export class CardComponent implements OnInit {
     this.router.navigate(['movie/' + id +'/movie-detail']);
   }
 
+  verifyLengthOverview(): void {
+    if(this.movie?.overview && this.movie?.overview.length > 340) {
+      this.isBigOverview = true;
+    }
+  }
 
 }
