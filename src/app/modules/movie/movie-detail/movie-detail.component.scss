@@ -1,3 +1,9 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
 .container__detail {
     background: #F2F2F2;
 
@@ -5,9 +11,14 @@
         border: 1px solid #79EDEB;
     }
 
+    .cdv {
+        justify-content: space-between;
+    }
+
     &__header {
         padding: 1px;
         background: #E6E6E6;
+
 
         header {
             display: flex;
@@ -21,6 +32,33 @@
 
             a {
                 color: #B0B0B0;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__average {
+
+        display: flex;
+        justify-content: end;
+
+        &__circle {
+            display: flex;
+            justify-content: center;
+            width: 20px;
+            height: 50px;
+            border-radius: 50%;
+            padding: 15px 30px;
+            background: #116193;
+            position: absolute;
+            border: 7px solid #00E8E4;
+            box-shadow: 0 0 0 3px #116193 !important;
+            margin: 5px 20px 0 0;
+
+            a {
+                color: #00E8E4;
+                margin-top: 4px;
+                font-size: 35px;
             }
         }
     }
@@ -43,26 +81,6 @@
                 text-align: center;
             }
         }
-
-        &__circle {
-            display: flex;
-            justify-content: center;
-            width: 30px;
-            height: 60px;
-            border-radius: 50%;
-            padding: 15px 30px;
-            background: #116193;
-            position: absolute;
-            border: 4px solid #00E8E4;
-            box-shadow: 0 0 0 3px #116193 !important;
-            margin: 5px 0px 2px 65%;
-
-            a {
-                color: #00E8E4;
-                margin-top: 10px;
-                font-size: 30px;
-            }
-          }
     }
 
     &__genre {
@@ -89,20 +107,21 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 670px) {
 
     .container__detail {
         .cdv {
             display: block;
         }
 
-        &__info {
-            padding: 5px 10px;
-
+        &__average {
             &__circle {
                 display: none;
             }
+        }
 
+        &__info {
+            padding: 5px 10px;
         }
 
         table {
