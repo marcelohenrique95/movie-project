@@ -53,4 +53,7 @@ export class MovieDetailComponent implements OnInit {
     this.movieDetail.profit = profitCalc;
   }
 
+  metodoTest(): void {
+    
+  }
 }
